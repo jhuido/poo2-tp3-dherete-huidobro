@@ -1,12 +1,13 @@
 {
   "name": "poo2-tp3-dherete-huidobro",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "testpush":"git add . && git commit -m \"TDD iteration\" && git push && jest"
+    "testpush": "git add . && git commit -m \"TDD iteration\" && git push && jest"
   },
+  
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
