@@ -6,3 +6,4 @@ function Posicion(posicionx,posiciony){
         return this.estado;
     }
 }
+module.exports=Posicion;
