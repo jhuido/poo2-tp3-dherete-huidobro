@@ -1,5 +1,4 @@
-const { default: expect } = require('expect');
-const { test } = require('picomatch');
+
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -70,7 +69,7 @@ test("Cambiar rectangulo de luces",()=>{
     var verticeInferior=new Posicion(2,2);
     var tablero= new Tablero();
     tablero.crearTablero();
-    
+
     tablero.encender(verticeSuperior,verticeInferior);
     var verticeSup2=new Posicion(0,1);
     var verticeInf2=new Posicion(2,2);
