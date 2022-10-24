@@ -69,9 +69,11 @@ test("Cambiar rectangulo de luces",()=>{
     var verticeSuperior=new Posicion(0,0);
     var verticeInferior=new Posicion(2,2);
     var tablero= new Tablero();
+
     tablero.crearTablero();
 
     tablero.encender(verticeSuperior,verticeInferior);
+    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
     var verticeSup2=new Posicion(0,1);
     var verticeInf2=new Posicion(2,2);
 
