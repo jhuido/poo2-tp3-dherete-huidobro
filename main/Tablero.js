@@ -3,8 +3,10 @@ const Posicion = require("./Posicion");
 function Tablero(){
     this.tablero=[];
     this.crearTablero=function(){
-        for(i=0;i<100;i++){
-            for(j=0;j<100;j++){
+        var i=0;
+        var j=0;
+        for(i;i<100;i++){
+            for(j;j<100;j++){
                 this.tablero[i,j]=new Posicion(i,j);
             }
         }
@@ -18,8 +20,8 @@ function Tablero(){
         }
     }
     this.apagar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
-            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
+        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
+            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Apagado");
             }
         }
