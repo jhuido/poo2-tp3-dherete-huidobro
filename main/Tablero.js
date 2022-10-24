@@ -36,7 +36,7 @@ function Tablero(){
                 this.tablero[i,j].cambiarEstadoInverso();
             }
         }
-        console.log(this.tablero[0,0].estadoActual());
+        console.log(this.tablero[0,0].cambiarEstado("Encendido"));
        
     }
 
