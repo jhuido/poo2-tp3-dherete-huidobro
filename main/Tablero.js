@@ -24,6 +24,20 @@ function Tablero(){
             }
         }
     }
+
+    this.cambiar=function(verticeSuperior,verticeInferior){
+        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
+            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
+
+                if(this.tablero[i,j]==="Apagado"){
+                    (this.tablero[i,j]).cambiarEstado("Encendido");
+                }
+                else{
+                    (this.tablero[i,j]).cambiarEstado("Apagado");
+                }
+            }
+        }
+    }
 }
 
 module.exports=Tablero;
