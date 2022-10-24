@@ -29,7 +29,7 @@ function Tablero(){
         }
     }
 
-    this.cambiar=function(verticeSuperior,verticeInferior){
+    this.cambiar=function(){
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
                 this.tablero[i,j].cambiarEstadoInverso();
