@@ -38,7 +38,9 @@ function Tablero(){
                 if(this.tablero[i,j].estadoActual()=="Apagado"){
                     this.tablero[i,j].cambiarEstado("Encendido");
                 }
-                
+                else if(this.tablero[i,j].estadoActual()=="Encendido"){
+                    this.tablero[i,j].cambiarEstado("Apagado");
+                }
             }
         }
        
