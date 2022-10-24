@@ -10,7 +10,13 @@ function Tablero(){
         }
         return "Tablero Creado";
     }
-    this.encender=function(veticeSuperior,verticeInferior)
+    this.encender=function(veticeSuperior,verticeInferior){
+        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx;i++){
+            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony;j++){
+                (this.tablero[i.j]).this.estado="Encendido";
+            }
+        }
+    }
 }
 
 module.exports=Tablero;
