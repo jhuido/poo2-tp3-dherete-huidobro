@@ -20,7 +20,7 @@ test("Crear tablero",()=>{
     expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
 })
 
-test("Funcion encender",()=>{
+test("Funcion encender caso cuadrado",()=>{
     var verticeSuperior=new Posicion(0,0);
     var verticeInferior=new Posicion(2,2);
     var tablero= new Tablero();

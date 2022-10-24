@@ -13,6 +13,10 @@ function Tablero(){
     this.encender=function(verticeSuperior,verticeInferior){
         for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
             for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
+                console.log("i "+i);
+                console.log("j "+j);
+                console.log("x "+tablero[i,j].posicionx);
+                console.log("y "+tablero[i,j].posiciony);
                 (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
