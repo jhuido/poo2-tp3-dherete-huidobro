@@ -37,3 +37,15 @@ test("Funcion encender caso cuadrado",()=>{
     expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
 
 })
+
+test("Funcion encender caso lineal",()=>{
+    var verticeSuperior=new Posicion(1,2);
+    var verticeInferior=new Posicion(3,2);
+    var tablero= new Tablero();
+    tablero.crearTablero();
+    tablero.encender(verticeSuperior,verticeInferior);
+    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[3,2].estadoActual()).toBe("Encendido");
+
+})
