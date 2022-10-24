@@ -55,11 +55,13 @@ function Tablero(){
             while(j<=99){
                 if(this.tablero[i,j].estadoActual()=="Encendido"){
                     cont=cont+1;
+                    console.log("[i,j]= "+i+", "+j);
                 }
                 j=j+1;
             }
             i=i+1;
         }
+
         return cont;
     }
 }
