@@ -49,12 +49,10 @@ function Tablero(){
 
     this.cantidadEncendidas=function(){
         var cont=0;
-        var i=0;
-        var j=0;
-        for(i;i<100;i++){
-            for(j;j<100;j++){
-                if((this.tablero[i,j]).estadoActual()=="Encendido"){
-                    cont=cont+1;
+        for(columna in tablero){
+            for(fila in tablero){
+                if(columna[fila]=="Encendido"){
+                    cont=cont+1
                 }
             }
         }
