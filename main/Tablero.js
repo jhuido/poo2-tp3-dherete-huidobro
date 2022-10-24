@@ -13,11 +13,11 @@ function Tablero(){
         return "Tablero Creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
-        var i=verticeSuperior.posiciony;
-        var j=verticeSuperior.posicionx;
+        var i=verticeSuperior.posicionx;
+        var j=verticeSuperior.posiciony;
         console.log(j);
-        for(i;i<verticeInferior.posiciony+1;i++){
-            for(j;j<verticeInferior.posicionx+1;j++){
+        for(i;i<verticeInferior.posicionx+1;i++){
+            for(j;j<verticeInferior.posiciony+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
