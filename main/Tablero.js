@@ -33,7 +33,7 @@ function Tablero(){
     this.cambiar=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posiciony;
         var j=verticeSuperior.posicionx;
-        for(i;i<(verticeInferior.posiciony)+1;i++){
+        for(i;i<(verticeInferior.posiciony+1);i++){
             for(j;j<(verticeInferior.posicionx+1);j++){
                 if((this.tablero[i,j]).estadoActual()=="Apagado"){
                     (this.tablero[i,j]).cambiarEstado("Encendido");
