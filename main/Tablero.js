@@ -30,14 +30,13 @@ function Tablero(){
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        console.log(this.tablero[0,0].estadoActual());
+        
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
                 this.tablero[i,j].cambiarEstadoInverso();
             }
         }
-        console.log(this.tablero[0,0].cambiarEstado("Encendido"));
-       
+        
     }
 
     this.cantidadEncendidas=function(){

@@ -86,7 +86,7 @@ test("Cambiar rectangulo de luces",()=>{
 
 
     var verticeSup2=new Posicion(0,1);
-    var verticeInf2=new Posicion(1,1);
+    var verticeInf2=new Posicion(2,1);
 
     tablero.cambiar(verticeSup2,verticeInf2);
     expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
@@ -94,7 +94,7 @@ test("Cambiar rectangulo de luces",()=>{
     expect(tablero.tablero[0,2].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[1,0].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[1,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[2,1].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
