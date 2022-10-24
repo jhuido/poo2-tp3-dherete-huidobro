@@ -89,6 +89,8 @@ test("Cambiar rectangulo de luces",()=>{
     var verticeInf2=new Posicion(2,1);
     tablero.apagar(verticeSup2,verticeInf2);
 
+
+    
     tablero.cambiar();
     expect(tablero.tablero[0,0].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[0,1].estadoActual()).toBe("Encendido");
