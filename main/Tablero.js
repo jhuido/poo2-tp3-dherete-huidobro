@@ -35,11 +35,13 @@ function Tablero(){
        
         for(i;i<(verticeInferior.posiciony);i++){
             for(j;j<(verticeInferior.posicionx);j++){
-                console.log("[i,j]= "+i+", "+j);
-                this.tablero[i,j].cambiarEstadoInverso();
+                if(this.tablero[ij].estadoActual()==="Encendido"){
+                    this.tablero[i,j].cambiarEstado("Apagado");
+                }
+                
             }
         }
-        console.log(i+","+j);
+       
     }
 
     this.cantidadEncendidas=function(){
