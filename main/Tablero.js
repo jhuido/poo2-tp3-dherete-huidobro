@@ -34,11 +34,11 @@ function Tablero(){
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
                 estado=this.tablero[i,j].estadoActual();
-                if(estado==="Encendido"){
-                    this.tablero[i,j].cambiarEstado("Apagado");
+                if(estado==="Apagado"){
+                    this.tablero[i,j].cambiarEstado("Encendido");
                 }
                 else{
-                    this.tablero[i,j].cambiarEstado("Encendido");
+                    this.tablero[i,j].cambiarEstado("Apagado");
                 }
             }
         }
