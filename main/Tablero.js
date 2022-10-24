@@ -32,13 +32,14 @@ function Tablero(){
     this.cambiar=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posiciony;
         var j=verticeSuperior.posicionx;
-        console.log(this.tablero[0,0].estadoActual());
+       
         for(i;i<((verticeInferior.posiciony)+1);i++){
             for(j;j<((verticeInferior.posicionx)+1);j++){
 
                this.tablero[i,j].cambiarEstadoInverso();
             }
         }
+        console.log(this.tablero[0,0].estadoActual());
     }
 
     this.cantidadEncendidas=function(){
