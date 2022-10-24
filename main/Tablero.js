@@ -13,9 +13,11 @@ function Tablero(){
         return "Tablero Creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
-            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
-                (this.tablero[i,j]).cambiarEstado("Encendido");
+        var i=verticeSuperior.posicionx;
+        var j=verticeSuperior.posiciony;
+        for(i;i<verticeInferior.posicionx+1;i++){
+            for(j;j<verticeInferior.posiciony+1;j++){
+                (this.tablero[j,i]).cambiarEstado("Encendido");
             }
         }
     }
