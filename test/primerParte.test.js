@@ -91,7 +91,7 @@ test("Cantidad encendidas",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
     var verticeSuperior=new Posicion(0,0);
-    var verticeInferior=new Posicion(0,1);
+    var verticeInferior=new Posicion(1,1);
     tablero.encender(verticeSuperior,verticeInferior);
-    expect(tablero.cantidadEncendidas()).toBe(2)
+    expect(tablero.cantidadEncendidas()).toBe(4)
 })
