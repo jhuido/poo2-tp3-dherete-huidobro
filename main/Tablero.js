@@ -3,8 +3,8 @@ const Posicion = require("./Posicion");
 function Tablero(){
     this.tablero=[];
     this.crearTablero=function(){
-        for(i=0;i<99;i++){
-            for(j=0;j<99;j++){
+        for(i=0;i<100;i++){
+            for(j=0;j<100;j++){
                 this.tablero[i,j]=new Posicion(i,j);
             }
         }
@@ -41,8 +41,10 @@ function Tablero(){
 
     this.cantidadEncendidas=function(){
         var cont=0;
-        for(i=0;i<99;i++){
-            for(j=0;j<99;j++){
+        var i=0;
+        var j=0;
+        for(i;i<100;i++){
+            for(j;j<100;j++){
                 if(this.tablero[i,j].estadoActual()==="Encendido"){
                     console.log("[i,j]"+"="+i+" ,"+j);
                     cont=cont+1;
