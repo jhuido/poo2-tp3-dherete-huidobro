@@ -33,13 +33,7 @@ function Tablero(){
         console.log(this.tablero[0,0].estadoActual());
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
-                if(this.tablero[i,j].estadoActual()=="Encendido"){
-                    this.tablero[i,j].cambiarEstado("Apagado");
-                    
-                }
-                else{
-                    this.tablero[i,j].cambiarEstado("Encendido");
-                }
+                this.tablero[i.j].cambiarEstadoInverso();
             }
         }
         console.log(this.tablero[0,0].estadoActual());
