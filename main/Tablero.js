@@ -49,8 +49,8 @@ function Tablero(){
 
     this.cantidadEncendidas=function(){
         var cont=0;
-        for(columna in tablero){
-            for(fila in tablero){
+        for(columna in this.tablero){
+            for(fila in this.tablero){
                 if(columna[fila]=="Encendido"){
                     cont=cont+1
                 }
