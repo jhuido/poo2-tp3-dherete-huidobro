@@ -71,6 +71,7 @@ test("Cambiar rectangulo de luces",()=>{
     var tablero= new Tablero();
 
     tablero.crearTablero();
+    const cam=0;
 
     tablero.encender(verticeSuperior,verticeInferior);
     expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
