@@ -15,6 +15,7 @@ function Tablero(){
     this.encender=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posicionx;
         var j=verticeSuperior.posiciony;
+        console.log(j);
         for(i;i<verticeInferior.posicionx+1;i++){
             for(j;j<verticeInferior.posiciony+1;j++){
                 (this.tablero[j,i]).cambiarEstado("Encendido");
