@@ -22,7 +22,7 @@ function Tablero(){
         }
     }
     this.apagar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony+1;i++){
+        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
             for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Apagado");
             }
@@ -32,7 +32,7 @@ function Tablero(){
     this.cambiar=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posiciony;
         var j=verticeSuperior.posicionx;
-        for(i;i<((verticeInferior.posiciony)+1);i++){
+        for(i;i<=((verticeInferior.posiciony)+1);i++){
             for(j;j<((verticeInferior.posicionx)+1);j++){
                 console.log("[i,j]= "+i+", "+j);
                this.tablero[i,j].cambiarEstadoInverso();
