@@ -13,26 +13,28 @@ function Tablero(){
         return "Tablero Creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
-        var i=verticeSuperior.posicionx;
-        var j=verticeSuperior.posiciony;
+        var i=verticeSuperior.posiciony;
+        var j=verticeSuperior.posicionx;
         console.log(j);
-        for(i;i<verticeInferior.posicionx+1;i++){
-            for(j;j<verticeInferior.posiciony+1;j++){
+        for(i;i<verticeInferior.posiciony+1;i++){
+            for(j;j<verticeInferior.posicionx+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
     }
     this.apagar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
-            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
+        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
+            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Apagado");
             }
         }
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
-            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
+        var i=verticeSuperior.posiciony;
+        var j=verticeSuperior.posicionx;
+        for(i;i<verticeInferior.posiciony+1;i++){
+            for(j;j<verticeInferior.posicionx+1;j++){
 
                 if(this.tablero[i,j].estadoActual()==="Apagado"){
                     (this.tablero[i,j]).cambiarEstado("Encendido");
