@@ -1,5 +1,4 @@
 
-const { test } = require('picomatch');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
