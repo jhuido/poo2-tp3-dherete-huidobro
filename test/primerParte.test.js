@@ -1,4 +1,5 @@
 
+const { test } = require('picomatch');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -75,7 +76,7 @@ test("Cambiar rectangulo de luces",()=>{
     var verticeInf2=new Posicion(2,2);
 
     tablero.cambiar(verticeSup2,verticeInf2);
-    
+
     expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[1,0].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
@@ -85,4 +86,13 @@ test("Cambiar rectangulo de luces",()=>{
     expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
+})
+
+test("Cantidad encendidas",()=>{
+    var tablero= new Tablero();
+    tablero.crearTablero();
+    var verticeSuperior=new Posicion(0,0);
+    var verticeInferior=new Posicion(2,2);
+    tablero.encender(verticeSuperior,verticeInferior);
+    expect(tablero.cantidadEncendidas()).toBe(9)
 })
