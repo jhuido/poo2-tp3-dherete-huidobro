@@ -41,6 +41,9 @@ function Tablero(){
                 else if(this.tablero[i,j].estadoActual()=="Encendido"){
                     this.tablero[i,j].cambiarEstado("Apagado");
                 }
+                else if(i==0 && j==0){
+                    console.log("llega");
+                }
             }
         }
        
