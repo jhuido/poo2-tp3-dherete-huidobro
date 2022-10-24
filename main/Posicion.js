@@ -8,13 +8,21 @@ function Posicion(posicionx,posiciony){
     this.posicionx=posicionx;
     this.posiciony=posiciony;
     this.estado="Apagado";
-    
+
     this.estadoActual=function(){
         return this.estado;
     }
 
     this.cambiarEstado=function(estadoACambiar){
         this.estado=estadoACambiar;
+    }
+    this.cambiarEstadoInverso=function(){
+        if(this.estado==="Encendido"){
+            this.estado="Apagado";
+        }
+        else{
+            this.estado="Encendido";
+        }
     }
 }
 
