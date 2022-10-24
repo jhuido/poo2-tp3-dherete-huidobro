@@ -10,6 +10,7 @@ function Tablero(){
         }
         return "Tablero Creado";
     }
+    this.encender=function(veticeSuperior,verticeInferior)
 }
 
 module.exports=Tablero;

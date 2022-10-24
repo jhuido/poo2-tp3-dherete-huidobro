@@ -22,7 +22,7 @@ test("Crear tablero",()=>{
 
 test("Funcion encender",()=>{
     var verticeSuperior=new Posicion(0,0);
-    var verticeInferiior=new Posicion(2,2);
+    var verticeInferior=new Posicion(2,2);
     var tablero= new Tablero();
     tablero.crearTablero();
     tablero.encender(vericeSuperior,verticeInferior);
