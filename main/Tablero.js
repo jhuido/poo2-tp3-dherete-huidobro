@@ -22,8 +22,8 @@ function Tablero(){
         }
     }
     this.apagar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
-            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
+        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony;i++){
+            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx;j++){
                 (this.tablero[i,j]).cambiarEstado("Apagado");
             }
         }
