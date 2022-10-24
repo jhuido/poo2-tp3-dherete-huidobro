@@ -90,8 +90,8 @@ test("Cambiar rectangulo de luces",()=>{
 test("Cantidad encendidas",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
-    var verticeSuperior=new Posicion(1,2);
-    var verticeInferior=new Posicion(3,2);
+    var verticeSuperior=new Posicion(0,0);
+    var verticeInferior=new Posicion(0,1);
     tablero.encender(verticeSuperior,verticeInferior);
-    expect(tablero.cantidadEncendidas()).toBe(3)
+    expect(tablero.cantidadEncendidas()).toBe(2)
 })
