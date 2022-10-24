@@ -26,8 +26,8 @@ function Tablero(){
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posiciony;i<verticeInferior.posiciony+1;i++){
-            for(j=verticeSuperior.posicionx;j<verticeInferior.posicionx+1;j++){
+        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
+            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
 
                 if(this.tablero[i,j].estadoActual()==="Apagado"){
                     (this.tablero[i,j]).cambiarEstado("Encendido");
