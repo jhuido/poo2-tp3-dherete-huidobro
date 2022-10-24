@@ -25,7 +25,7 @@ test("Funcion encender",()=>{
     var verticeInferior=new Posicion(2,2);
     var tablero= new Tablero();
     tablero.crearTablero();
-    tablero.encender(vericeSuperior,verticeInferior);
+    tablero.encender(verticeSuperior,verticeInferior);
     expect(tablero.tablero[0,0]).estadoActual().toBe("Encendido");
     expect(tablero.tablero[0,1]).estadoActual().toBe("Encendido");
     expect(tablero.tablero[0,2]).estadoActual().toBe("Encendido");
