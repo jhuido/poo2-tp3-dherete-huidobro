@@ -90,7 +90,7 @@ test("Cambiar rectangulo de luces",()=>{
     tablero.apagar(verticeSup2,verticeInf2);
 
     tablero.cambiar();
-    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0,0].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[0,1].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[0,2].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[1,0].estadoActual()).toBe("Apagado");
