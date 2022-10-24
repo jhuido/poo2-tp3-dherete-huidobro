@@ -30,11 +30,11 @@ function Tablero(){
     }
 
     this.cambiar=function(){
-        for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
-            for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
-                this.tablero[i,j].cambiarEstadoInverso();
-            }
-        }
+        this.tablero.forEach(pos=>{
+            const posx=pos.posicionx;
+            const posy=pos.posiciony;
+            this.tablero[posx,posy].cambiarEstadoInverso();
+        })
         
     }
 
