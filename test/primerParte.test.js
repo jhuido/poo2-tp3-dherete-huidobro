@@ -1,5 +1,3 @@
-
-const { default: expect } = require('expect');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -47,5 +45,21 @@ test("Funcion encender caso lineal",()=>{
     expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[1,1].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[3,2].estadoActual()).toBe("Encendido");
+
+})
+
+test("Apagar rectangulo",()=>{
+    var verticeSuperior=new Posicion(0,1);
+    var verticeInferior=new Posicion(2,2);
+    var tablero= new Tablero();
+    tablero.crearTablero();
+    tablero.encender(verticeSuperior,verticeInferior);
+    tablero.apagar(verticeSuperior,verticeInferior);
+    expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0,2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
 
 })
