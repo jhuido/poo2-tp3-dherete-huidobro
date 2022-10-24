@@ -49,8 +49,8 @@ function Tablero(){
 
     this.cantidadEncendidas=function(){
         var cont=0;
-        var i=0;
-        var j=0;
+        let i=0;
+        let j=0;
         while(i<=99){
             while(j<=99){
                 if(this.tablero[i,j].estadoActual()=="Encendido"){
