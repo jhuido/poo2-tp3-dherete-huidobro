@@ -30,39 +30,22 @@ function Tablero(){
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        var i=verticeSuperior.posiciony; 
-        var j=verticeSuperior.posicionx;
-        while(i<=verticeInferior.posiciony){
-            while(j<=verticeInferior.posicionx){
-                if(this.tablero[i,j].estadoActual()=="Encendido"){
+        var estado;
+        for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
+            for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
+                estado=this.tablero[i,j].estadoActual();
+                if(estado=="Encendido"){
                     this.tablero[i,j].cambiarEstado("Apagado");
                 }
                 else{
                     this.tablero[i,j].cambiarEstado("Encendido");
                 }
-                j=j+1;
             }
-            i=i+1;
         }
        
     }
 
     this.cantidadEncendidas=function(){
-        let cont=0;
-        let i=0;
-        let j=0;
-        while(i<=99){
-            while(j<=99){
-                if(this.tablero[i,j].estadoActual()=="Encendido"){
-                    cont=cont+1;
-                    console.log("[i,j]= "+i+", "+j);
-                }
-                j=j+1;
-            }
-            i=i+1;
-        }
-
-        return cont;
     }
 }
 
