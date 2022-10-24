@@ -30,13 +30,19 @@ function Tablero(){
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        var i=verticeInferior.posiciony;
-        var j=verticeInferior.posicionx;
-       
-        for(i;i>=(verticeSuperior.posiciony);i--){
-            for(j;j>=(verticeSuperior.posicionx);j--){
-                this.tablero[i,j].cambiarEstadoInverso();
+        var i=verticeSuperior.posiciony; 
+        var j=verticeSuperior.posicionx;
+        while(i<=verticeInferior.posiciony){
+            while(j<=verticeInferior.posicionx){
+                if(this.tablero[i,j].estadoActual()==="Encendido"){
+                    this.tablero[i,j].cambiarEstado("Apagado");
+                }
+                else{
+                    this.tablero[i,j].cambiarEstado("Encendido");
+                }
+                j=j+1;
             }
+            i=i+1;
         }
        
     }
