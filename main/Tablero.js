@@ -39,7 +39,7 @@ function Tablero(){
                 this.tablero[i,j].cambiarEstadoInverso();
             }
         }
-        c
+        
     }
 
     this.cantidadEncendidas=function(){
