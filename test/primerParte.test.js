@@ -1,3 +1,5 @@
+const { default: expect } = require('expect');
+const { test } = require('picomatch');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -61,5 +63,24 @@ test("Apagar rectangulo",()=>{
     expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
+})
 
+test("Cambiar rectangulo de luces",()=>{
+    var verticeSuperior=new Posicion(0,0);
+    var verticeInferior=new Posicion(2,2);
+    var tablero= new Tablero();
+    tablero.crearTablero();
+    tablero.encender(verticeSuperior,verticeInferior);
+    var verticeSup2=new Posicion(0,1);
+    var verticeInf2=new Posicion(2,2);
+    tablero.cambiar(verticeSup2,verticeInf2);
+    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0,2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
 })
