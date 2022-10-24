@@ -51,7 +51,6 @@ function Tablero(){
         for(i;i<100;i++){
             for(j;j<100;j++){
                 if((this.tablero[i,j]).estadoActual()=="Encendido"){
-
                     cont=cont+1;
                 }
             }

@@ -1,4 +1,5 @@
 
+const { default: expect } = require('expect');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -93,5 +94,10 @@ test("Cantidad encendidas",()=>{
     var verticeSuperior=new Posicion(0,0);
     var verticeInferior=new Posicion(1,1);
     tablero.encender(verticeSuperior,verticeInferior);
+
+    expect(tablero[0,0].estadoActual()).toBe("Encendido");
+    expect(tablero[0,1].estadoActual()).toBe("Encendido");
+    expect(tablero[1,0].estadoActual()).toBe("Encendido");
+    expect(tablero[1,1].estadoActual()).toBe("Encendido");
     expect(tablero.cantidadEncendidas()).toBe(4)
 })
