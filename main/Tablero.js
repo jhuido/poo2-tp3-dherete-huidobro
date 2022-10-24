@@ -11,8 +11,8 @@ function Tablero(){
         return "Tablero Creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
-        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx;i++){
-            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony;j++){
+        for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx+1;i++){
+            for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony+1;j++){
                 (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
