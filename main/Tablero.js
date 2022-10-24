@@ -13,12 +13,12 @@ function Tablero(){
         return "Tablero Creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
-        var i=verticeSuperior.posicionx;
-        var j=verticeSuperior.posiciony;
+        var i=verticeSuperior.posiciony;
+        var j=verticeSuperior.posicionx;
         console.log(j);
-        for(i;i<verticeInferior.posicionx+1;i++){
-            for(j;j<verticeInferior.posiciony+1;j++){
-                (this.tablero[j,i]).cambiarEstado("Encendido");
+        for(i;i<verticeInferior.posiciony+1;i++){
+            for(j;j<verticeInferior.posicionx+1;j++){
+                (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
     }
