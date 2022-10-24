@@ -13,7 +13,7 @@ function Tablero(){
     this.encender=function(verticeSuperior,verticeInferior){
         for(i=verticeSuperior.posicionx;i<verticeInferior.posicionx;i++){
             for(j=verticeSuperior.posiciony;j<verticeInferior.posiciony;j++){
-                (this.tablero[i.j]).cambiarEstado("Encendido");
+                (this.tablero[i,j]).cambiarEstado("Encendido");
             }
         }
     }
