@@ -48,7 +48,7 @@ function Tablero(){
     }
 
     this.cantidadEncendidas=function(){
-        var cont=0;
+        let cont=0;
         let i=0;
         let j=0;
         while(i<=99){
@@ -60,6 +60,7 @@ function Tablero(){
             }
             i=i+1;
         }
+        return cont;
     }
 }
 
