@@ -30,7 +30,6 @@ function Tablero(){
     }
 
     this.cambiar=function(verticeSuperior,verticeInferior){
-        
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
                 this.tablero[i,j].cambiarEstadoInverso();
@@ -40,7 +39,18 @@ function Tablero(){
     }
 
     this.cantidadEncendidas=function(){
+        var cont=0;
+        var i=0;
+        var j=0;
+            for(i;i<100;i++){
+                for(j;j<100;j++){
+                    if(this.tablero[i,j]=="Encendido"){
+                        cont=cont+1;
+                    }
+                }
+            }
+        return cont;
     }
-}
 
+}
 module.exports=Tablero;
