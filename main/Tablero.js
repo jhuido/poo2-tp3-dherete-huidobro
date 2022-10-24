@@ -33,7 +33,7 @@ function Tablero(){
         console.log(this.tablero[0,0].estadoActual());
         for(i=verticeSuperior.posiciony;i<=verticeInferior.posiciony;i++){
             for(j=verticeSuperior.posicionx;j<=verticeInferior.posicionx;j++){
-                this.tablero[i.j].cambiarEstadoInverso();
+                this.tablero[i,j].cambiarEstadoInverso();
             }
         }
         console.log(this.tablero[0,0].estadoActual());
