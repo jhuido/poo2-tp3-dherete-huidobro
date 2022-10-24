@@ -33,13 +33,13 @@ function Tablero(){
         var i=verticeSuperior.posiciony;
         var j=verticeSuperior.posicionx;
        
-        for(i;i<=((verticeInferior.posiciony)+1);i++){
-            for(j;j<=((verticeInferior.posicionx));j++){
+        for(i;i<(verticeInferior.posiciony)+1;i++){
+            for(j;j<(verticeInferior.posicionx)+1;j++){
                 console.log("[i,j]= "+i+", "+j);
                 this.tablero[i,j].cambiarEstadoInverso();
             }
         }
-        
+        console.log(i+","+j);
     }
 
     this.cantidadEncendidas=function(){
