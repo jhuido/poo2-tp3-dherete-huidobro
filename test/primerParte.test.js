@@ -98,6 +98,7 @@ test("Cambiar rectangulo de luces",()=>{
     expect(tablero.tablero[2,0].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
     expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
+    
 })
 
 test("Cantidad encendidas",()=>{
