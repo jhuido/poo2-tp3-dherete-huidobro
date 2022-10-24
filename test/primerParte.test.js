@@ -1,4 +1,5 @@
 
+const { default: expect } = require('expect');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
@@ -17,4 +18,22 @@ test("Crear tablero",()=>{
     var tablero= new Tablero();
     expect(tablero.crearTablero()).toBe("Tablero Creado");
     expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
+})
+
+test("Funcion encender",()=>{
+    var verticeSuperior=new Posicion(0,0);
+    var verticeInferiior=new Posicion(2,2);
+    var tablero= new Tablero();
+    tablero.crearTablero();
+    tablero.encender(vericeSuperior,verticeInferior);
+    expect(tablero.tablero[0,0]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[0,1]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[0,2]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[1,0]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[1,1]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[1,2]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[2,0]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[2,1]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[2,2]).estadoActual().toBe("Encendido");
+
 })
