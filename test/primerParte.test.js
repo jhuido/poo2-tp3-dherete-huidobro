@@ -26,14 +26,14 @@ test("Funcion encender",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
     tablero.encender(verticeSuperior,verticeInferior);
-    expect(tablero.tablero[0,0]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[0,1]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[0,2]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[1,0]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[1,1]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[1,2]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[2,0]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[2,1]).estadoActual().toBe("Encendido");
-    expect(tablero.tablero[2,2]).estadoActual().toBe("Encendido");
+    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0,1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2,1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
 
 })
