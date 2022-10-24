@@ -51,7 +51,7 @@ function Tablero(){
         var cont=0;
         for(columna in this.tablero){
             for(fila in this.tablero){
-                if(columna[fila]=="Encendido"){
+                if(tablero[columna[fila]]=="Encendido"){
                     cont=cont+1
                 }
             }
