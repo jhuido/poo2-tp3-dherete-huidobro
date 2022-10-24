@@ -53,7 +53,7 @@ function Tablero(){
         var j=0;
         while(i<=99){
             while(j<=99){
-                if(this.tablero[i,j]=="Encendido"){
+                if(this.tablero[i,j].estadoActual()=="Encendido"){
                     cont=cont+1;
                 }
                 j=j+1;
