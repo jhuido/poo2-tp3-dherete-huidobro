@@ -1,5 +1,5 @@
 
-const { default: expect } = require('expect');
+
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
 
