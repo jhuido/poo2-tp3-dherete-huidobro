@@ -32,6 +32,7 @@ function Tablero(){
     this.cambiar=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posiciony;
         var j=verticeSuperior.posicionx;
+        console.log(i+"´,"+j);
         for(i;i<((verticeInferior.posiciony)+1);i++){
             for(j;j<((verticeInferior.posicionx)+1);j++){
 
